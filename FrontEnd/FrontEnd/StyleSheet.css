@@ -1,0 +1,15 @@
+﻿body {
+    font-family: 'Roboto Slab';
+}
+.red{
+    color: red;
+}
+.header{
+    font-size: xx-large;
+}
+.subheader{
+    font-size: x-large;
+}
+.align-center{
+    text-align: center;
+}
