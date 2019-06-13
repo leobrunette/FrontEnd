@@ -2,35 +2,45 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+    <script src="bootstrap.min.js"></script>
+    <script src="jquery.min.js"></script>
+
     <title>Code The Way</title>
 </head>
-<body onload="showHide()">
-    <img src="images/CodeTheWay Logo.png" />
-    <div class="header">Code The Way</div>
-    <div>
-        <p class="subheader">Mission</p>
-        <p> Code the Way facilitates the collaboration of schools, companies, and nonprofits to: (1) Offer students advanced computer science training and real-world job experiences working on projects that benefit nonprofits; (2) Increase certified computer science teachers; and (3) Contribute to the technology talent base.
-        </p>
-        <p>Code the Way model includes:</p>
-        <ul>
-            <li><div class="tooltip">Student access to real-world job experience<span class=tooltiptext>addition to an advanced course that may earn post-secondary credits, students get experience working collaboratively on a project that benefits a nonprofit, culminating in a presentation to business leaders.</span></div></li>
-            <li><div class="tooltip">Companies are part of the solution<span class="tooltiptext">Companies invest in education, make technology more accessible to nonprofits, offer their employees a meaningful volunteer experience, and contribute to the talent pipeline.</span></div></li>
-            <li><div class="tooltip">Increasing certified computer science teachers<span class="tooltiptext">Support and training for computer science teacher certification increases the availability and quality of high school computer science programs.</span></div></li>
-        </ul>
-        <div>
-            <img src="images/Team Learning.jpg" align="right" />
-            <button class="buttonFormatting" onclick="showHide()">Show/Hide Vision</button>
-            <div id="vision">
-                <p class="subheader" align="left">Vision</p>
-                <p align="left">High school students in Greater Milwaukee have access to high quality computer science education and real-world job experiences, positioning them for success in technology-related fields</p>
-            </div>
+<body onload="showHide(); colorChange();">
+    <div class="container">
+        <img src="images/CodeTheWay Logo.png" />
+        <div class="header" id="title">Code The Way</div>
+        <div align="center">
+            <button class="buttonFormatting" onclick="colorChange()">Change Color</button>
         </div>
         <div>
-            <p class="subheader">Links</p>
+            <p class="subheader">Mission</p>
+            <p>
+                Code the Way facilitates the collaboration of schools, companies, and nonprofits to: (1) Offer students advanced computer science training and real-world job experiences working on projects that benefit nonprofits; (2) Increase certified computer science teachers; and (3) Contribute to the technology talent base.
+            </p>
+            <p>Code the Way model includes:</p>
+            <ul>
+                <li><div class="tooltip">Student access to real-world job experience<span class=tooltiptext>addition to an advanced course that may earn post-secondary credits, students get experience working collaboratively on a project that benefits a nonprofit, culminating in a presentation to business leaders.</span></div></li>
+                <li><div class="tooltip">Companies are part of the solution<span class="tooltiptext">Companies invest in education, make technology more accessible to nonprofits, offer their employees a meaningful volunteer experience, and contribute to the talent pipeline.</span></div></li>
+                <li><div class="tooltip">Increasing certified computer science teachers<span class="tooltiptext">Support and training for computer science teacher certification increases the availability and quality of high school computer science programs.</span></div></li>
+            </ul>
+            <div>
+                <img src="images/Team Learning.jpg" align="right" />
+                <button class="buttonFormatting" onclick="showHide()">Show/Hide Vision</button>
+                <div id="vision">
+                    <p class="subheader" align="left">Vision</p>
+                    <p align="left">High school students in Greater Milwaukee have access to high quality computer science education and real-world job experiences, positioning them for success in technology-related fields</p>
+                </div>
+            </div>
+            <div>
+                <p class="subheader">Links</p>
                 <a href="lifeNav.html" class="navigationLink">Life Navigators</a>
                 <a href="heros.html" class="navigationLink">Heroes For Healthcare</a>
                 <a href="media.html" class="navigationLink">Media</a>
+            </div>
         </div>
     </div>
 </body>
@@ -43,5 +53,14 @@
         } else {
             v.style.display = "block";
         }
+    }
+    function colorChange() {
+        var letters = '0123456789ABCDEF';
+        var c = "#";
+        for (var i = 0; i < 6; i++) {
+            c += letters[Math.floor(Math.random() * 16)];
+        }
+        var title = document.getElementById("title");
+        title.style.color = c;
     }
 </script>
