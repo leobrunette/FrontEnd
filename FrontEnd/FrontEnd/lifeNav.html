@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="StyleSheet.css">
     <title>Life Navigators</title>
 </head>
-<body>
+<body onload="showHide()">
     <div class="header">Life Navigators</div>
     <div>
         <p class="subheader">Mission</p>
@@ -19,7 +19,8 @@
         <p class="subheader">Vision</p>
         <p>Life Navigators envisions an inclusive community where individuals with disabilities and their support networks experience full participation and maximized independence. Our community will value the rights, hopes, dreams and contributions of all people with disabilities.</p>
     </div>
-    <div>
+    <button class="buttonFormatting" onclick="showHide()">Show/Hide History</button>
+    <div id="history">
         <p class="subheader">History</p>
         <p>Life Navigators was founded by parents who were committed to developing programs and educational opportunities for their children with intellectual and developmental disabilities.</p>
         <ul>
@@ -64,3 +65,13 @@
     </div>
 </body>
 </html>
+<script type="text/javascript">
+    function showHide() {
+        var v = document.getElementById("history");
+        if (v.style.display !== "none") {
+            v.style.display = "none";
+        } else {
+            v.style.display = "block";
+        }
+    }
+</script>

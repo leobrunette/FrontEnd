@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="StyleSheet.css">
     <title>Code The Way</title>
 </head>
-<body>
+<body onload="showHide()">
     <img src="images/CodeTheWay Logo.png" />
     <div class="header">Code The Way</div>
     <div>
@@ -14,14 +14,17 @@
         </p>
         <p>Code the Way model includes:</p>
         <ul>
-            <li>Student access to real-world job experience – In addition to an advanced course that may earn post-secondary credits, students get experience working collaboratively on a project that benefits a nonprofit, culminating in a presentation to business leaders.  </li>
-            <li>Companies are part of the solution – Companies invest in education, make technology more accessible to nonprofits, offer their employees a meaningful volunteer experience, and contribute to the talent pipeline.  </li>
-            <li>Increasing certified computer science teachers – Support and training for computer science teacher certification increases the availability and quality of high school computer science programs.</li>
+            <li><div class="tooltip">Student access to real-world job experience<span class=tooltiptext>addition to an advanced course that may earn post-secondary credits, students get experience working collaboratively on a project that benefits a nonprofit, culminating in a presentation to business leaders.</span></div></li>
+            <li><div class="tooltip">Companies are part of the solution<span class="tooltiptext">Companies invest in education, make technology more accessible to nonprofits, offer their employees a meaningful volunteer experience, and contribute to the talent pipeline.</span></div></li>
+            <li><div class="tooltip">Increasing certified computer science teachers<span class="tooltiptext">Support and training for computer science teacher certification increases the availability and quality of high school computer science programs.</span></div></li>
         </ul>
         <div>
-            <img src="images/Team Learning.jpg" align="right"/>
-            <p class="subheader" align="left">Vision</p>
-            <p align="left">High school students in Greater Milwaukee have access to high quality computer science education and real-world job experiences, positioning them for success in technology-related fields</p>
+            <img src="images/Team Learning.jpg" align="right" />
+            <button class="buttonFormatting" onclick="showHide()">Show/Hide Vision</button>
+            <div id="vision">
+                <p class="subheader" align="left">Vision</p>
+                <p align="left">High school students in Greater Milwaukee have access to high quality computer science education and real-world job experiences, positioning them for success in technology-related fields</p>
+            </div>
         </div>
         <div>
             <p class="subheader">Links</p>
@@ -32,3 +35,13 @@
     </div>
 </body>
 </html>
+<script type="text/javascript">
+    function showHide() {
+        var v = document.getElementById("vision");
+        if (v.style.display !== "none") {
+            v.style.display = "none";
+        } else {
+            v.style.display = "block";
+        }
+    }
+</script>

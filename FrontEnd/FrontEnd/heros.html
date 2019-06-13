@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="StyleSheet.css">
     <title>Heros For Healthcare</title>
 </head>
-<body>
+<body onload="showHide()">
         <img src="images/Heroes Logo.png" />
         <div class="header">Heros For Healthcare</div>
         <div align="left">
@@ -18,11 +18,12 @@
         <p class="subheader">Unemployed Veterans</p>
         <p>Many U.S. Veterans find it hard to secure a job in healthcare when they’re ready to work in the civilian world. Even after showing dedication, strong work ethic, and leadership while serving our country, many military members can’t find jobs.</p>
         <ul>
-            <li>453,000 unemployed veterans in 2016</li>
-            <li>Post-Sept. 11 veterans tend to be unemployed at higher rates than other veterans</li>
+            <li><div class="tooltip">453,000 <span class="tooltiptext">unemployed veterans in 2016</span></div></li>
+            <li><div class="tooltip">Post-Sept. 11 veterans <span class="tooltiptext">tend to be unemployed at higher rates than other veterans</span></div></li>
         </ul>
     </div>
-    <div>
+    <button class="buttonFormatting" onclick="showHide()">Show/Hide Message From President</button>
+    <div id="message">
         <p class="subheader">Message From the President</p>
         <p>
             I started Heroes for Healthcare to help our U.S. military personnel receive the resources and credentials they need to continue their career in healthcare as a civilian.
@@ -37,3 +38,13 @@
     </div>
 </body>
 </html>
+<script type="text/javascript">
+    function showHide() {
+        var v = document.getElementById("message");
+        if (v.style.display !== "none") {
+            v.style.display = "none";
+        } else {
+            v.style.display = "block";
+        }
+    }
+</script>
