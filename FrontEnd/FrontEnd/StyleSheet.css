@@ -29,31 +29,13 @@
     margin: 4px 2px;
     cursor: pointer;
     transition-duration: 0.4s;
-    border-radius: 10px;
+    border-radius: 4px;
 }
 .navigationLink:hover{
     background-color: white;
     color: #557A95;
 }
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-}
-.tooltip:hover .tooltiptext{
-    visibility: visible;
-}
-.tooltip .tooltiptext{
-    visibility: hidden;
-    width: 500px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-}
+
 .buttonFormatting {
     background-color: #557A95;
     border: 2px solid #557A95;
@@ -67,10 +49,31 @@
     margin: 4px 2px;
     cursor: pointer;
     transition-duration: 0.4s;
-    border-radius: 10px;
+    border-radius: 4px;
 }
 
-    .buttonFormatting:hover {
-        background-color: white;
-        color: #557A95;
-    }
+.buttonFormatting:hover {
+    background-color: white;
+    color: #557A95;
+}
+body + .tooltip > .tooltip-inner {
+    background-color: #557A95;
+    border: 2px solid #557A95;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border: 1px solid #557A95;
+    padding: 15px;
+    font-size: small;
+}
+
+body + .tooltip.bottom > .tooltip-arrow {
+    border-bottom: 2px solid #557A95;
+    display: inline-block;
+    margin: 4px 2px;
+}
